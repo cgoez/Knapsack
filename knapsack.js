@@ -39,7 +39,12 @@ function naiveKnapsack(items, capacity) {
 }
 
 /*
-  Greedy Strategy
+=====  Greedy Strategy =====
+  0. Go through our items and filter out any items whose size > knapsack's capacity
+  1. 'Score' each item by determining it's value/weight ratio
+  2. Sort the items array by each item's ratio such that the items with the best ratio
+  are at the top of the array of items
+  3. Grab items off the top of the items array until we reach our knapsack's full capacity
 */
 
 const greedyAlgo = (items, capacity) => {
